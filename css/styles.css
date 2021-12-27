@@ -241,7 +241,6 @@ img {
 }
 .features-item.logo-laptop::before {
   background-image: url(../images/laptop.svg);
-  background-size: 70px 53.69px;
   background-repeat: no-repeat;
   background-position: center;
 }
