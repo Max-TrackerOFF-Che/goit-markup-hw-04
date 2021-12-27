@@ -73,9 +73,20 @@ img {
   line-height: 1.17;
   letter-spacing: 0.02em;
 }
+.contacts-link:not(:last-child) {
+  margin-right: 30px;
+}
+
 .contacts-link:hover,
 .contacts-link:focus {
   color: var(--hover-effect);
+}
+.contacts-link::before {
+  content: '11';
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  margin-right: 10px;
 }
 .nav-link {
   color: inherit;
@@ -120,7 +131,6 @@ img {
 
 .nav-contacts {
   display: flex;
-  padding: 0px 34px 0px;
   width: 357px;
   justify-content: space-between;
 }
@@ -152,6 +162,8 @@ img {
 }
 /* -----------------------Студия------------------------------- */
 /* Большой блок под рекламу  */
+.overlay {
+}
 .hero-title {
   color: var(--background-color);
   font-weight: 900;
@@ -161,13 +173,21 @@ img {
   text-transform: uppercase;
   margin: 0 auto;
   width: 696px;
-  /* Тут сделаю тень чтобы было видно белый заголовок пока */
 }
 .hero {
   background-color: var(--footer-bg-color);
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+
+  height: 600px;
+  min-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/overlay.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 /* Кнопка на странице Cтудия */
 .btn {
@@ -188,10 +208,42 @@ img {
 }
 
 /* Стили заголовка и текста на странице Cтудия */
-
+/* Перечисление особенностей на странице Студия */
 .features-list {
   display: flex;
   justify-content: space-between;
+}
+.features-item::before {
+  display: block;
+  content: '';
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--button-background);
+  border-radius: 4px;
+}
+.features-item.logo-satelite::before {
+  background-image: url(../images/satelite.svg);
+  background-size: 65.32px 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.features-item.logo-time::before {
+  background-image: url(../images/time.svg);
+  background-size: 66.96px 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.features-item.logo-laptop::before {
+  background-image: url(../images/laptop.svg);
+  background-size: 70px 53.69px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.features-item.logo-astronaut::before {
+  background-image: url(../images/astronaut.svg);
+  background-size: 70px 70px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .features-item {
   width: 270px;
