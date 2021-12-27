@@ -7,6 +7,8 @@
   --footer-bg-color: #2f303a;
   --border-color: #eeeeee;
   --background-color-cards: #5E5E5;
+  --icons-color: #afb1b8;
+  --button-footer-bgc: rgba(255, 255, 255, 0.1);
 }
 * {
   box-sizing: border-box;
@@ -81,13 +83,28 @@ img {
 .contacts-link:focus {
   color: var(--hover-effect);
 }
-.contacts-link::before {
-  content: '11';
+/* .contacts-link::before {
+  content: '';
   width: 20px;
   height: 20px;
   background-color: red;
   margin-right: 10px;
+  background-image: url(../images/envelope.svg);
+  background-size: contain;
+} */
+.icon-email {
+  width: 16px;
+  height: 12px;
+  fill: var(--secondary-text-color);
+  margin-right: 10px;
+  align-self: flex-end;
 }
+.icon-phone {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+}
+
 .nav-link {
   color: inherit;
   text-decoration: none;
@@ -266,6 +283,41 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+/* Социальные сети в карточках */
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 32px 30px;
+}
+.social-link {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--icons-color);
+}
+.social-link:hover {
+  background-color: var(--hover-effect);
+  fill: white;
+  border-radius: 50%;
+}
+.icon-instagram {
+  width: 20px;
+  height: 20px;
+}
+.icon-twitter {
+  width: 20px;
+  height: 16.25px;
+}
+.icon-facebook {
+  width: 10px;
+  height: 20px;
+}
+.icon-linkedin {
+  width: 20px;
+  height: 20px;
+}
 .section-header {
   font-style: normal;
   font-weight: bold;
@@ -286,7 +338,6 @@ img {
 }
 .name-title {
   padding-top: 30px;
-  padding-bottom: 30px;
   text-align: center;
 }
 .name {
@@ -310,6 +361,26 @@ img {
 }
 .job-title {
   line-height: 1.1;
+}
+/* Наши клиенты */
+.clients-box {
+  width: 1170px;
+}
+.our-clients {
+  display: flex;
+  justify-content: space-between;
+}
+.clients-item {
+  outline: 1px solid var(--icons-color);
+  width: 170px;
+  height: 94px;
+  border-radius: 4px;
+}
+.clients-icon {
+  width: 106px;
+  height: 60px;
+  margin: 16px 32px;
+  fill: var(--icons-color);
 }
 
 /* ---------------Страница Портфолио----------------------- */
@@ -337,6 +408,8 @@ img {
   background-color: var(--hover-effect);
   color: var(--background-color);
   cursor: pointer;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /* кнопки навигации вверху в портфолио */
 .button-list {
@@ -381,6 +454,11 @@ img {
   margin-right: 30px;
   margin-bottom: 30px;
 }
+.project-item:hover,
+.project-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .project-image {
   margin-left: 0;
   margin-right: 0;
@@ -404,7 +482,9 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--footer-bg-color);
+  display: flex;
 }
+
 .logo-footer {
   color: var(--background-color);
 }
@@ -414,4 +494,36 @@ img {
 }
 .footer-list {
   margin-top: 20px;
+}
+.join-navigation {
+  margin-left: 70px;
+}
+.join-list {
+  width: 206px;
+  height: 80px;
+  display: flex;
+}
+.join-icons-link {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--button-background);
+  border-radius: 50%;
+  background-color: var(--button-footer-bgc);
+  margin-right: 10px;
+}
+.join-icons-link:hover {
+  background-color: var(--hover-effect);
+  fill: white;
+  border-radius: 50%;
+}
+.footer-title {
+  text-transform: uppercase;
+  color: var(--background-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  margin-bottom: 20px;
 }
