@@ -83,15 +83,6 @@ img {
 .contacts-link:focus {
   color: var(--hover-effect);
 }
-/* .contacts-link::before {
-  content: '';
-  width: 20px;
-  height: 20px;
-  background-color: red;
-  margin-right: 10px;
-  background-image: url(../images/envelope.svg);
-  background-size: contain;
-} */
 .icon-email {
   width: 16px;
   height: 12px;
