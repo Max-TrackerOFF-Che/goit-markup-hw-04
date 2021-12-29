@@ -96,6 +96,12 @@ img {
   margin-right: 10px;
 }
 
+.icon-email:hover,
+.icon-email:focus,
+.icon-phone:hover,
+.icon-phone:focus {
+  fill: var(--hover-effect);
+}
 .nav-link {
   color: inherit;
   text-decoration: none;
@@ -187,7 +193,7 @@ img {
   padding-bottom: 200px;
 
   height: 600px;
-  min-width: 1600px;
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -372,7 +378,12 @@ img {
   margin: 16px 32px;
   fill: var(--icons-color);
 }
-
+.clients-icon:hover {
+  fill: var(--hover-effect);
+}
+.clients-item:hover {
+  outline: 1px solid var(--hover-effect);
+}
 /* ---------------Страница Портфолио----------------------- */
 
 /* Кнопки перехода между проектами */
@@ -473,6 +484,7 @@ img {
   padding-bottom: 60px;
   background-color: var(--footer-bg-color);
   display: flex;
+  align-items: center;
 }
 
 .logo-footer {
