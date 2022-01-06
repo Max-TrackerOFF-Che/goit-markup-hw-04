@@ -284,8 +284,8 @@ img {
 /* Социальные сети в карточках */
 .social-list {
   display: flex;
-  justify-content: space-between;
-  margin: 16px 32px 30px;
+  justify-content: center;
+  margin-top: 16px;
 }
 .social-link {
   width: 44px;
@@ -299,6 +299,9 @@ img {
   background-color: var(--hover-effect);
   fill: white;
   border-radius: 50%;
+}
+.social-item:not(last-child) {
+  margin-right: 10px;
 }
 .icon-instagram {
   width: 20px;
@@ -336,6 +339,7 @@ img {
 }
 .name-title {
   padding-top: 30px;
+  padding-bottom: 30px;
   text-align: center;
 }
 .name {
