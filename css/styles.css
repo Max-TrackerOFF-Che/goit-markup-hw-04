@@ -74,6 +74,8 @@ img {
   font-weight: 500;
   line-height: 1.17;
   letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
 }
 .contacts-link:not(:last-child) {
   margin-right: 30px;
